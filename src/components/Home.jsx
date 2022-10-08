@@ -34,7 +34,7 @@ function Home () {
                             </div>
                             <div className="cards-dapps-body"></div>                                                                                                            
                             <div className="cards-dapps-footer">
-                                <button>Unlock Wallet</button>    
+                                <button className="unlock-button">Unlock Wallet</button>    
                             </div>                                        
                         </div>
                         <div className="cards-dapp">
@@ -44,8 +44,8 @@ function Home () {
                             </div>
                             <div className="cards-dapps-body"></div>                                                                            
                             <div className="cards-dapps-footer">
-                                <button>Collect winnings</button>
-                                <button>Approve On</button>
+                                <button className="collect-button">Collect winnings</button>
+                                <button className="approve-button">Approve On</button>
                             </div>                        
                         </div>
                     </div>

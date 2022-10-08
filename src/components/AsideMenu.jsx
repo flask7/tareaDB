@@ -26,8 +26,10 @@ function AsideMenu() {
                 </ul>
             </div>
             <div className="aside-footer">
-                <div className="">
-                    <div className=""></div>
+                <div className="fields-footer">
+                    <div className="">
+                        <ion-icon name="stats-chart-sharp"></ion-icon>
+                    </div>
                     <div className="">
                         <div className="">
                             <ion-icon name="logo-whatsapp"></ion-icon>
@@ -37,7 +39,7 @@ function AsideMenu() {
                         </div>
                     </div>
                 </div>
-                <div className="">
+                <div className="fields-footer">
                     <div className=""></div>
                 </div>
             </div>
