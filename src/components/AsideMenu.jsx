@@ -1,27 +1,70 @@
+import { Link } from "react-router-dom";
+import { useSelector } from 'react-redux';
+import { useEffect, useState } from "react";
+
 function AsideMenu() {
+
+    const toggleState = useSelector((state) => state?.toggleSlice?.value);
+    const [toggle, setToggle] = useState(toggleState);
+
+    useEffect(() => {
+        
+        setToggle(toggleState);
+        console.log(toggleState);
+
+    }, [toggleState]);
+
     return (
         <aside>
             <div className="">
                 <ul>
                     <li>
                         <ion-icon name="home-sharp"></ion-icon>
-                        <p>Home</p>
+                        { toggle && <Link to={'/'}>Home</Link> }                        
                     </li>
                     <li>
-                        <ion-icon name="home-sharp"></ion-icon>
-                        <p>rigvhdsouifvh</p>
+                        <ion-icon name="analytics-sharp"></ion-icon>
+                        { toggle && <p>Trade </p> }                        
                     </li>
                     <li>
-                        <ion-icon name="home-sharp"></ion-icon>
-                        <p>rigvhdsouifvh</p>
+                        <ion-icon name="storefront-sharp"></ion-icon>
+                        { toggle && <Link to={'/money'}>Money Farm</Link> }                        
                     </li>
                     <li>
-                        <ion-icon name="home-sharp"></ion-icon>
-                        <p>rigvhdsouifvh</p>
+                        <ion-icon name="water-sharp"></ion-icon>
+                        { toggle && <p>Pools</p> }                        
                     </li>
                     <li>
-                        <ion-icon name="home-sharp"></ion-icon>
-                        <p>rigvhdsouifvh</p>
+                        <ion-icon name="ticket-sharp"></ion-icon>
+                        { toggle && <p>Lottery</p> }                        
+                    </li>
+                    <li>
+                        <ion-icon name="cart-sharp"></ion-icon>
+                        { toggle && <Link to={'/marketplace'}>NFT Market</Link> }                        
+                    </li>
+                    <li>
+                        <ion-icon name="shield-sharp"></ion-icon>
+                        { toggle && <p>Audit</p> }                        
+                    </li>
+                    <li>
+                        <ion-icon name="person-add-sharp"></ion-icon>
+                        { toggle && <p>Invite & Earn</p> }                        
+                    </li>
+                    <li>
+                        <ion-icon name="people-sharp"></ion-icon>
+                        { toggle && <p>Teams & Profile</p> }                        
+                    </li>
+                    <li>
+                        <ion-icon name="bar-chart-sharp"></ion-icon>
+                        { toggle && <p>Analytics</p> }                        
+                    </li>
+                    <li>
+                        <ion-icon name="bulb-sharp"></ion-icon>
+                        { toggle && <p>IFO</p> }                        
+                    </li>
+                    <li>
+                        <ion-icon name="ellipsis-horizontal-sharp"></ion-icon>
+                        { toggle && <p>MORE</p> }                        
                     </li>
                 </ul>
             </div>
